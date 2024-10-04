@@ -42,7 +42,7 @@ const shareKakao = () => {
 }
 
   return (
-    <Button>
+    <Button onClick={shareKakao}>
       카카오톡 공유하기
     </Button>
   )
