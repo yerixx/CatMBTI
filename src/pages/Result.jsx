@@ -1,9 +1,9 @@
 import React,{ useState , useEffect } from 'react'
 import { useNavigate,useSearchParams } from 'react-router-dom';
-import { resultdata } from '../assets/resultdata.js'
-
 import styled from 'styled-components'
 import { Button } from 'react-bootstrap';
+import { resultdata } from '../assets/resultdata.js'
+import KakaoShareBtn from '../components/KakaoShareBtn.jsx';
 
 const Wrapper = styled.div`
   color:#fff;
@@ -51,7 +51,6 @@ const Desc = styled.div`
   border-radius:10px;
 
 `
-
 const Text = styled.div`
   width:550px;
   background:orange;
@@ -65,6 +64,10 @@ const Text = styled.div`
     padding: 10px 20px;
     line-height:28px;
   }
+`
+const BtnGroup = styled.div`
+  display: flex;
+  gap:10px;
 `
 
 const Result = () => {
@@ -82,7 +85,7 @@ const Result = () => {
     setResultData(result);
   },[mbti]);
 
-  console.log(resultData)
+  // console.log(resultData)
   return (
 <Wrapper>
       <Header>두구두구 예비집사 판별기</Header>
@@ -93,7 +96,10 @@ const Result = () => {
         </LogoImg>
         <Desc>예비 집사님과 찰떡궁합인 고양이는 ~~?<br/>🐈🐈🐈{resultData.best}형 {resultData.name}입니다!!!!🐈🐈🐈</Desc>
         <Text>{resultData.desc}</Text>
-        <Button variant="warning" onClick={handleClickBtn}>테스트 다시하기</Button>
+        <BtnGroup>
+          <Button variant="warning" onClick={handleClickBtn}>테스트 다시하기</Button>
+          <KakaoShareBtn />
+        </BtnGroup>
       </Contents>
     </Wrapper>
   )
