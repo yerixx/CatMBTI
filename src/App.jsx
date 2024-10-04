@@ -2,7 +2,7 @@ import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { createGlobalStyle } from "styled-components"
 import reset from "styled-reset"
-import Layout from './components/layout';
+import Layout from './components/Layout';
 import Home from './pages/Home'
 import Question from './pages/Question'
 import Result from './pages/Result'
