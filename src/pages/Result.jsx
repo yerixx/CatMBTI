@@ -98,7 +98,7 @@ const Result = () => {
         <Text>{resultData.desc}</Text>
         <BtnGroup>
           <Button variant="warning" onClick={handleClickBtn}>테스트 다시하기</Button>
-          <KakaoShareBtn />
+          <KakaoShareBtn data={resultData} />
         </BtnGroup>
       </Contents>
     </Wrapper>
