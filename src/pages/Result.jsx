@@ -36,12 +36,20 @@ const LogoImg = styled.div`
     width:350px;
     height:350px;
     border:4px solid #fff;
+    @media (max-width:780px) {
+      width:200px;
+      height:200px;
+    }
   }
 `
 const Desc = styled.div`
   margin:10px 0;
   font-size:20px;
   text-align:center;
+  background:green;
+  padding:10px;
+  border-radius:10px;
+
 `
 
 const Text = styled.div`
@@ -51,6 +59,12 @@ const Text = styled.div`
   font-size:25px;
   line-height:40px;
   border-radius:10px;
+  @media (max-width:780px) {
+    width:360px;
+    font-size:24px;
+    padding: 10px 20px;
+    line-height:28px;
+  }
 `
 
 const Result = () => {

@@ -21,6 +21,9 @@ const Title = styled.div`
   background:orange;
   border-radius:8px;
   text-align: center;
+  @media (max-width:780px) {
+    font-size:28px;
+  }
 `
 const ButtonGroup = styled.div`
   display: flex;
@@ -31,6 +34,22 @@ const ButtonGroup = styled.div`
     width:400px;
     height:200px;
     font-size:24px;
+  }
+  @media (max-width:780px) {
+    flex-direction:column;
+    *{
+      width:300px;
+      height:100px;
+      font-size:18px;
+    }
+  }
+  @media (max-width:360px) {
+    flex-direction:column;
+    *{
+      width:200px;
+      height:100px;
+      font-size:16px;
+    }
   }
 `
 
